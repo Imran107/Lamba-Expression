@@ -11,16 +11,8 @@ public class Greeter {
 		HelloWorldGreeting helloWorldGreeting = new HelloWorldGreeting();
 		greeter.greet(helloWorldGreeting);
 		
-		MyLambda myLambdaFunction = () -> System.out.println("Hello World");
+		// We already have a fucntional interface available with the same signature
+		Greeting myLambdaFunction = () -> System.out.println("Hello World");
 		
-		MyAdd addFunction = (int a, int b) -> a+b;
 	}
-}
-
-interface MyLambda{
-	void perform();
-}
-
-interface MyAdd{
-	int add(int a, int b);
 }
