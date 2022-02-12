@@ -10,5 +10,11 @@ public class Greeter {
 		Greeter greeter = new Greeter();
 		HelloWorldGreeting helloWorldGreeting = new HelloWorldGreeting();
 		greeter.greet(helloWorldGreeting);
+		
+		MyLambda myLambdaFunction = () -> System.out.println("Hello World");
 	}
+}
+
+interface MyLambda{
+	void perform();
 }
