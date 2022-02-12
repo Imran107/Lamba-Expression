@@ -12,9 +12,15 @@ public class Greeter {
 		greeter.greet(helloWorldGreeting);
 		
 		MyLambda myLambdaFunction = () -> System.out.println("Hello World");
+		
+		MyAdd addFunction = (int a, int b) -> a+b;
 	}
 }
 
 interface MyLambda{
 	void perform();
+}
+
+interface MyAdd{
+	int add(int a, int b);
 }
