@@ -7,12 +7,13 @@ public class Greeter {
 	}
 
 	public static void main(String[] args) {
-		Greeter greeter = new Greeter();
-		HelloWorldGreeting helloWorldGreeting = new HelloWorldGreeting();
-		greeter.greet(helloWorldGreeting);
 		
-		// We already have a fucntional interface available with the same signature
-		Greeting myLambdaFunction = () -> System.out.println("Hello World");
+		// They both behaves exactly the same.
+		Greeting helloWorldGreeting = new HelloWorldGreeting();
+		Greeting lambdaGreeting = () -> System.out.println("Hello World");
+		
+		helloWorldGreeting.perform();
+		lambdaGreeting.perform();
 		
 	}
 }
