@@ -10,19 +10,20 @@ public class Greeter {
 		
 		//Implementing interface through a class
 		Greeting helloWorldGreeting = new HelloWorldGreeting();
-		helloWorldGreeting.perform();
 		
 		//Functional interface implementation with lambda function.
-		Greeting lambdaGreeting = () -> System.out.println("Hello World");
-		lambdaGreeting.perform();
+		Greeting lambdaGreeting = () -> System.out.println("Hello World Lamba Function");
 		
 		// This is the inline implementation of the interface without creating the Implementation class
 		Greeting greeting = new Greeting(){
 			public void perform(){
-				System.out.println("Hello World!");
+				System.out.println("Hello World Inline Implementation!");
 			}
 		};
-		greeting.perform();
-		
+
+		Greeter greeter = new Greeter();
+		greeter.greet(helloWorldGreeting);
+		greeter.greet(lambdaGreeting);
+		greeter.greet(greeting);
 	}
 }
