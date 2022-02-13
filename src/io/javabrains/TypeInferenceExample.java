@@ -3,8 +3,7 @@ package io.javabrains;
 public class TypeInferenceExample {
 	
 	public static void main(String[] args) {
-		StringLengthLambda lengthLambda = s -> s.length();
-		printLambda(lengthLambda);
+		printLambda(s -> s.length());
 	}
 	
 	public static void printLambda(StringLengthLambda l){
